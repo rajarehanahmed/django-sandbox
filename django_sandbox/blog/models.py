@@ -1,8 +1,11 @@
-from django.db.models import CharField, TextField, ForeignKey, PROTECT
-from django_sandbox.core.models import SoftDeleteAuditableMixin
-from simple_history.models import HistoricalRecords
 from django.contrib.auth import get_user_model
+from django.db.models import PROTECT
+from django.db.models import CharField
+from django.db.models import ForeignKey
+from django.db.models import TextField
+from simple_history.models import HistoricalRecords
 
+from django_sandbox.core.models import SoftDeleteAuditableMixin
 
 User = get_user_model()
 
