@@ -1,6 +1,6 @@
-from django.urls import path
-from django_sandbox.blog.api.views import PostViewSet
 from rest_framework.routers import SimpleRouter
+
+from django_sandbox.blog.api.views import PostViewSet
 
 app_name = "blog"
 
