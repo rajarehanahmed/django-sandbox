@@ -19,7 +19,7 @@ class PostAdmin(ModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(ModelAdmin):
     list_display = ("post", "author", "is_active")
-    search_fields = ("body",)
+    search_fields = ("comment",)
     list_filter = ("author", "is_active")
     raw_id_fields = ("author", "post")
 
