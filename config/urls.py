@@ -43,6 +43,10 @@ urlpatterns += [
         SpectacularSwaggerView.as_view(url_name="api-schema"),
         name="api-docs",
     ),
+    path(
+        "api/v1/",
+        include("django_sandbox.blog.urls", namespace="blog"),
+    ),
 ]
 
 if settings.DEBUG:
