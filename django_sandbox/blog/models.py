@@ -6,6 +6,7 @@ from django.db.models import ForeignKey
 from django.db.models import Q
 from django.db.models import TextField
 from django.db.models import UniqueConstraint
+from django.db.models import URLField
 
 from django_sandbox.core.models import SoftDeleteAuditableMixin
 
@@ -15,6 +16,7 @@ User = get_user_model()
 class Post(SoftDeleteAuditableMixin):
     title = CharField(max_length=200, db_index=True)
     body = TextField()
+    thumbnail = URLField(null=True, blank=True)
     author = ForeignKey(User, on_delete=PROTECT)
 
     def __str__(self):

@@ -13,6 +13,7 @@ class PostViewSet(ModelViewSet):
     queryset = Post.objects.active()
     serializer_class = PostSerializer
     ordering_fields = ("created", "updated", "title")
+    permission_classes = []
 
     def perform_create(self, serializer):
         """Set the author to the current authenticated user when creating a post."""
